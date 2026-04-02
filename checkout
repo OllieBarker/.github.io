@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Payment</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        #card-element { border: 1px solid #ccc; padding: 10px; border-radius: 4px; }
+        button { margin-top: 20px; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h2>Checkout</h2>
+    <form id="payment-form">
+        <div id="card-element"><!-- Stripe Card Element --></div>
+        <button type="submit">Pay</button>
+        <div id="payment-result"></div>
+    </form>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        const stripe = Stripe("pk_test_YOUR_PUBLIC_KEY"); // Replace with your Stripe public key
+        const elements = stripe.elements();
+        const card = elements.create("card");
+        card.mount("#card-element");
+
+        const form = document.getElementById("payment-form");
+        const resultDiv = document.getElementById("payment-result");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const { paymentMethod, error } = await stripe.createPaymentMethod({
+                type: "card",
+                card: card
+            });
+
+            if (error) {
+                resultDiv.textContent = error.message;
+            } else {
+                // Send paymentMethod.id to backend
+                const res = await fetch("/pay", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ paymentMethodId: paymentMethod.id })
+                });
+
+                const data = await res.json();
+                resultDiv.textContent = data.message;
+            }
+        });
+    </script>
+</body>
+</html>
