@@ -1,0 +1,136 @@
+<!-- Language: HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Designs</title>
+    <!-- Basic styles for layout -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #ff6f61;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 250px;
+            text-align: center;
+            padding: 20px;
+        }
+        .product img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+        .product h3 {
+            margin: 15px 0 5px;
+        }
+        .product p {
+            margin: 5px 0;
+        }
+        .product button {
+            background-color: #ff6f61;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #ff4a3a;
+        }
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Current Designs</h1>
+    <nav>
+        <a href="cool.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+		<a href="request.html">Your Custom Requests</a>
+		<a href="cart.html">Cart</a>
+    </nav>
+</header>
+<div class="container">
+    <h2>Current designs</h2>
+    <div class="products">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="images/design1.png">
+			<h2>Illusion</h2>
+            <h3>By Ollie</h3>
+			<p>Price: £20</p>
+			<button onclick="addToCart('Illusion', 20)">Add to Cart</button>
+        </div>
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="needs filling out" alt="By Maddie">
+            <h3>By Random</h3>
+			<p>Price: £20</p>
+			<button onclick="addToCart('Illusion', 20)">Add to Cart</button>
+        </div>
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="needs filling out" alt="By Maddie">
+            <h3>By Random</h3>
+			<p>Price: £20</p>
+			<button onclick="addToCart('Illusion', 20)">Add to Cart</button>
+        </div>
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="needs filling out" alt="By Maddie">
+            <h3>By Random</h3>
+			<p>Price: £20</p>
+			<button onclick="addToCart('Illusion', 20)">Add to Cart</button>
+        </div>
+		<div class=addToCart>
+		<script src="script.js"></script>
+		</div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 O & M - Swimsuit designers. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M & O - Swimsuit Designs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">M & O - Swimsuit Designers</a>
+            <ul class="nav-links">
+                <li><a href="shop.html">Current designs</a></li>
+                <li><a href="request.html">Your Design request</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html" id="cart-icon"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+Your Imagination, On a swimsuit.
+Bring your own designs to life.
+Shop Now Request a Design
+    <section id="featured-products">
+        <h2>Current designs</h2>
+        <div class="product-grid" id="featured-products-container">
+            <!-- Featured products will be loaded here by JavaScript -->
+        </div>
+    </section>
+How It Works
+Browse & Select
+Explore our collection of pre-designed suits.
+Submit Your Design
+Upload your own design for a chance to have your design on a swimsuit for a popular brand.
+We print and ship your custom creations directly to you.
+© 2025 M & O - Swimsuit Designers. All rights reserved.
+<script src="js/script.js"></script>
+<script src="js/cart.js"></script>
+<style>
+```
+/* General Styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --accent-color: #28a745;
+    --text-color: #333;
+    --bg-color: #f8f9fa;
+    --light-gray: #e9ecef;
+    --white: #fff;
+}
+•	{ margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text-color); background-color: var(--bg-color); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+/* Header & Navigation */ .navbar { background-color: var(--white); padding: 1rem 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+.navbar .logo { font-size: 1.8rem; font-weight: bold; color: var(--primary-color); text-decoration: none; }
+.nav-links { list-style: none; display: flex; gap: 1.5rem; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--text-color); font-weight: 500; transition: color 0.3s ease; }
+.nav-links a:hover { color: var(--primary-color); }
+#cart-icon { position: relative; font-size: 1.5rem; color: var(--text-color); cursor: pointer; }
+#cart-count { position: absolute; top: -8px; right: -8px; background-color: var(--accent-color); color: var(--white); border-radius: 50%; padding: 0.2em 0.5em; font-size: 0.7rem; line-height: 1; }
+/* Hero Section */ #hero { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-bg.jpg') no-repeat center center/cover; color: var(--white); text-align: center; padding: 100px 20px; display: flex; align-items: center; justify-content: center; min-height: 500px; }
+.hero-content { max-width: 800px; }
+#hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+#hero p { font-size: 1.3rem; margin-bottom: 2rem; }
+.btn { display: inline-block; background-color: var(--primary-color); color: var(--white); padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background-color 0.3s ease; margin: 0 10px; }
+.btn:hover { background-color: #0056b3; }
+.secondary-btn { background-color: var(--secondary-color); }
+.secondary-btn:hover { background-color: #5a6268; }
+/* Sections */ section { padding: 60px 20px; text-align: center; }
+section h2 { font-size: 2.5rem; margin-bottom: 40px; color: var(--primary-color); }
+/* How It Works Section */ #how-it-works { background-color: var(--light-gray); }
+.steps-container { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.step { background-color: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); max-width: 300px; text-align: center; }
+.step i { font-size: 3rem; color: var(--primary-color); margin-bottom: 20px; }
+.step h3 { font-size: 1.5rem; margin-bottom: 10px; color: var(--text-color); }
+.step p { color: #666; }
+}
